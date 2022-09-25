@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { useTodo } from '../../context/todo';
 import { Plus } from 'phosphor-react';
 import * as Styles from './style';
@@ -7,7 +7,8 @@ const FormEnterNameTask = () => {
   const [name, setName] = useState<string>("");
   const { addTodo } = useTodo();
 
-  const handleAddTask = () => {
+  const handleAddTask = (event: FormEvent) => {
+    event.preventDefault();
     if (name === "") return;
     addTodo(name);
     setName("")

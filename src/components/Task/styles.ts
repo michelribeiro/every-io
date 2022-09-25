@@ -13,10 +13,11 @@ export const Container = styled.div`
     gap: 1rem;
     align-items: center;
     flex-direction: column;
+    padding: 0.4rem;
   }
 
   li {
-    width: 100%;
+    width: calc(100% - 2rem);
     max-width: 300px;
     padding: 1rem;
     border-radius: 4px;

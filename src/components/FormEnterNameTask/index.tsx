@@ -18,7 +18,7 @@ const FormEnterNameTask = () => {
     <Styles.Container>
       <form onSubmit={handleAddTask}>
         <input placeholder='Add Task' type="text" value={name} onChange={(e) => setName(e.target.value)} />
-        <button onClick={() => handleAddTask}>
+        <button data-testid="addTask" onClick={() => handleAddTask}>
           <Plus color='white' size={24} />
         </button>
       </form>

@@ -23,7 +23,7 @@ const Task = ({ task }: Props) => {
       <ul>
         {
           task.map(item => (
-            <li key={item.id}>
+            <li key={item.id}  data-testid={`listTodo-${item.id}`}>
               <button
                 aria-label="back"
                 type="button"

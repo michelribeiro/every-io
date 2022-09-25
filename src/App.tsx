@@ -1,5 +1,6 @@
 import React from 'react'
 import { ChallengeComponent } from './ChallengeComponent'
+import { TodoProvider } from './context/todo';
 import './App.css'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         style={{
           width: 'calc(100vw - 50px)',
           margin: '0 auto',
+          padding: '2.5rem',
           maxHeight: '100%',
           background: '#fcfcfc',
           border: '1px solid #000000',
@@ -30,7 +32,9 @@ function App() {
           boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
           borderRadius: 40,
         }}>
-        <ChallengeComponent />
+        <TodoProvider>
+          <ChallengeComponent />
+        </TodoProvider>
       </main>
     </div>
   )

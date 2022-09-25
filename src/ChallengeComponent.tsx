@@ -1,10 +1,15 @@
 import React from 'react'
+import Card from './components/Card';
+import { useTodo } from './context/todo'
+import FormEnterNameTask from './components/FormEnterNameTask';
 
 export function ChallengeComponent() {
+  const { listTodo } = useTodo();
+
   return (
     <>
-      {/* Delete this h2, and add your own code here. */}
-      <h2 style={{ textAlign: 'center', paddingTop: 200, paddingBottom: 200 }}>Your code goes here</h2>
+      <Card list={listTodo} />
+      <FormEnterNameTask />
     </>
   )
 }
